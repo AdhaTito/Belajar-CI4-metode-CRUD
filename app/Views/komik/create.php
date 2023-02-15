@@ -1,11 +1,13 @@
-<?= $this->extend('layout/template'); ?>
+<!--Pemanggilan template-->
+<?= $this->extend('layout/sidebar'); ?>
 
+<!--ISI CONTENT-->
 <?= $this->section('content'); ?>
 <div class="container">
     <div class="row">
         <div class="col-8">
             <div class="mb-4 badge bg-primary text-warning fs-2" style="width: 30rem;">Form Tambah Komik</div>
-            <form action="<?= base_url('/komik/save'); ?>" method="post">
+            <form action="<?= base_url('/komik/save'); ?>" method="post" >
                 <?= csrf_field(); ?>
                 <div class="mb-2">
                     <label for="judul" class="form-label">Judul</label>

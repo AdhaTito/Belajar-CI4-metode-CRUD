@@ -5,3 +5,13 @@
 .table > tbody > * {
     vertical-align: middle;
 }
+
+
+
+.bg {
+    background-image: url("../images/bg2.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

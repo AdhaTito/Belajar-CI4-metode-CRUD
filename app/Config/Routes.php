@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\Komik;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -25,7 +27,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-// $routes->setAutoRoute(true);
+$routes->setAutoRoute(true);
 
 /*
  * --------------------------------------------------------------------
@@ -40,12 +42,22 @@ $routes->set404Override();
 
 // Halaman Utama
 // $routes->get('/', "Home::index");
+
+// User
 $routes->get('/', 'Pages::index');
 $routes->get('/pages/about', 'Pages::about');
+$routes->get('/user', 'User::index');
+$routes->post('/user/save', 'User::save');
+// $routes->get('/user/edit/(:segment)', 'User::edit/$1');
+// $routes->post('/user/update/(:segment)', 'User::update/$1');
+$routes->delete('/user/(:num)', 'User::delete/$1');
+
+// Komik
 $routes->get('/komik', 'Komik::index');
 $routes->post('/komik/save', 'Komik::save');
 $routes->get('/komik/create', 'Komik::create');
 $routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
+$routes->post('/komik/update/(:segment)', 'komik::update/$1');
 $routes->delete('/komik/(:num)', 'komik::delete/$1');
 $routes->get('/komik/(:any)', 'Komik::detail/$1');
 

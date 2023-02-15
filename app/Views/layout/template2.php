@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <title><?= $title; ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="<?= base_url('../bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style1.css">
+    <title><?= $title; ?></title>
 </head>
 
-<body>
+<body background="../images/bg2.jpg">
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar" class="active">
             <h1><a href="index.html" class="logo">M.</a></h1>
             <ul class="list-unstyled components mb-5">
                 <li class="active">
-                    <a class="nav-link" href="<?= base_url('/pages/about'); ?>"><span class="fa fa-home"></span> Home</a>
+                    <a class="nav-link" href="<?= base_url('/'); ?>"> <span class="fa fa-home"></span> Home</a>
                 </li>
                 <li>
                     <a href="#"><span class="fa fa-user"></span> About</a>
@@ -35,8 +35,6 @@
                     <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
                 </li>
             </ul>
-
-
         </nav>
 
         <!-- Page Content  -->
@@ -56,10 +54,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="<?= base_url('/'); ?>">Home</a>
+                                <a class="nav-link" href="<?= base_url('/'); ?>"">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('/pages/about'); ?>">About</a>
+                            <li class=" nav-item">
+                                    <a class="nav-link" href="<?= base_url('/pages/about'); ?>">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= base_url('/komik'); ?>">Table Komik</a>
@@ -74,14 +72,13 @@
             <?= $this->renderSection('content'); ?>
         </div>
     </div>
-
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/popper.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/main.js"></script>
 </body>
 
 </html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
 <!-- Navbar End -->
 
 
@@ -90,6 +87,9 @@
 <!--Header End -->
 
 
+<!-- java Script -->
+<script src="../bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<!--java script end-->
 
 <!--Footer-->
 <!--Style gelombang 5-->
@@ -102,7 +102,3 @@
     <p>Visit us on my facebook <a href="https://www.facebook.com/zitcheron.zitcheron" class="text-white fw-bold">Adha Mastito</a></p>
 </footer>
 <!--Footer End -->
-
-<!-- java Script -->
-<script src="../bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<!--java script end-->

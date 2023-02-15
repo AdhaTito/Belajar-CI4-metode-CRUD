@@ -8,7 +8,7 @@ class KomikModel extends Model
 {
     protected $table = 'komik';
     protected $useTimestamps = true;
-    protected $allowedFields = ['judul', 'slug', 'penulis', 'penerbit', 'cover'];
+    protected $allowedFields = ['judul', 'slug', 'penulis', 'penerbit', 'cover','sinopsis'];
     
     public function getKomik($slug = false)
     {
@@ -18,5 +18,9 @@ class KomikModel extends Model
         return $this->where(['slug' => $slug])->first();
     }
 
+    public function search($keyword)
+    {
+        return $this->table('komik')->like('judul', $keyword)->orlike('penerbit', $keyword);
+    }
     
 }
